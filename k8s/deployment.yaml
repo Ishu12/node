@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+
+  labels:
+    app: tekton-helloworld
+  name: tekton-helloworld-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tekton-helloworld
+  template:
+    metadata:
+      labels:
+        app: tekton-helloworld
+    spec:
+      containers:
+        - image: quay.io/openshift-pipeline/tekton-helloworld/check:latest
+          imagePullPolicy: Always
+          name: tekton-helloworld
+          ports:
+            - containerPort: 9000
+              protocol: TCP
