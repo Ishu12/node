@@ -16,7 +16,7 @@ spec:
         app: tekton-node
     spec:
       containers:
-        - image: quay.io/openshift-pipeline/tekton-node/tekton-node-dep:latest
+        - image: quay.io/openshift-pipeline/tekton-node:latest
           imagePullPolicy: Always
           name: tekton-node
           ports:
