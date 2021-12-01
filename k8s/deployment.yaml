@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
 
   labels:
-    app: tekton-helloworld
-  name: tekton-helloworld-deployment
+    app: tekton-node
+  name: tekton-node-dep
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tekton-helloworld
+      app: tekton-node
   template:
     metadata:
       labels:
-        app: tekton-helloworld
+        app: tekton-node
     spec:
       containers:
-        - image: quay.io/openshift-pipeline/tekton-helloworld/check:latest
+        - image: quay.io/openshift-pipeline/tekton-node/tekton-node-dep:latest
           imagePullPolicy: Always
-          name: tekton-helloworld
+          name: tekton-node
           ports:
             - containerPort: 9000
               protocol: TCP
