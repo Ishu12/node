@@ -1,13 +1,24 @@
 {
-  "name": "docker_web_app",
-  "version": "1.0.0",
-  "description": "Node.js on Docker",
-  "author": "First Last <first.last@example.com>",
-  "main": "server.js",
+  "name": "node-js-tekton",
+  "version": "0.0.1",
+  "description": "Example Node.js Application with Tekton Pipeline",
+  "author": "Jonathan Johnson",
+  "license": "MIT",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "^4.16.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "node-js-tekton"
+  },
+  "keywords": [
+    "cancer",
+    "tekton",
+    "kubernetes",
+    "node.js"
+  ]
 }
