@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
 
   labels:
-    app: tekton-node
-  name: tekton-node-dep
+    app: pipeline-dep-node
+  name: pipeline-dep-node
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tekton-node
+      app: pipelie-dep-node
   template:
     metadata:
       labels:
-        app: tekton-node
+        app: pipeline-dep-node
     spec:
       containers:
-        - image: image-registry.openshift-image-registry.svc:5000/tekton-ode/tekton-node-dep:latest
+        - image: quay.io/openshift-pipeline/dep-node:latest
           imagePullPolicy: Always
-          name: tekton-node
+          name: pipeline-dep-node
           ports:
             - containerPort: 9000
               protocol: TCP
